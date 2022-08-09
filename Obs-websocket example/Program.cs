@@ -8,7 +8,7 @@ using System.Text;
 //*** Init
 ClientWebSocket ws = new ClientWebSocket();
 
-string ip = "127.0.1";
+string ip = "127.0.0.1";
 string port = "4455";
 string password = "";
 
@@ -41,7 +41,7 @@ Task SendJSON(ClientWebSocket ws, String data, CancellationToken cancellation)
     return ws.SendAsync(buffer, WebSocketMessageType.Text, true, cancellation);
 }
 
-//*** Function to send JSON Message to the server
+//*** Function to get JSON response from the server
 async Task GetResponse()
 {
     byte[] buffer = new byte[256];
